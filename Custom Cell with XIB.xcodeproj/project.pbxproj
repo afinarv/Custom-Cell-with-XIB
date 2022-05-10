@@ -13,6 +13,8 @@
 		9B30EA04282A83CE00553316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B30EA02282A83CE00553316 /* Main.storyboard */; };
 		9B30EA06282A83D000553316 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B30EA05282A83D000553316 /* Assets.xcassets */; };
 		9B30EA09282A83D000553316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B30EA07282A83D000553316 /* LaunchScreen.storyboard */; };
+		9B30EA12282A845800553316 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B30EA10282A845800553316 /* CustomCell.swift */; };
+		9B30EA13282A845800553316 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B30EA11282A845800553316 /* CustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B30EA05282A83D000553316 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B30EA08282A83D000553316 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B30EA0A282A83D000553316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B30EA10282A845800553316 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		9B30EA11282A845800553316 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				9B30E9FE282A83CE00553316 /* SceneDelegate.swift */,
 				9B30EA00282A83CE00553316 /* ViewController.swift */,
 				9B30EA02282A83CE00553316 /* Main.storyboard */,
+				9B30EA10282A845800553316 /* CustomCell.swift */,
+				9B30EA11282A845800553316 /* CustomCell.xib */,
 				9B30EA05282A83D000553316 /* Assets.xcassets */,
 				9B30EA07282A83D000553316 /* LaunchScreen.storyboard */,
 				9B30EA0A282A83D000553316 /* Info.plist */,
@@ -127,6 +133,7 @@
 			files = (
 				9B30EA09282A83D000553316 /* LaunchScreen.storyboard in Resources */,
 				9B30EA06282A83D000553316 /* Assets.xcassets in Resources */,
+				9B30EA13282A845800553316 /* CustomCell.xib in Resources */,
 				9B30EA04282A83CE00553316 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				9B30EA01282A83CE00553316 /* ViewController.swift in Sources */,
 				9B30E9FD282A83CE00553316 /* AppDelegate.swift in Sources */,
+				9B30EA12282A845800553316 /* CustomCell.swift in Sources */,
 				9B30E9FF282A83CE00553316 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
