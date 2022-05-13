@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         let nib = UINib(nibName: "CustomCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell")
+        let nib2 = UINib(nibName: "CustomExpensiveCell", bundle: nil)
+        tableView.register(nib2, forCellReuseIdentifier: "expensiveCell")
     }
 
 }
@@ -50,9 +52,15 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let product = friendsWishlist[indexPath.section].wishlist[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomCell
-        cell.setupCell(product)
-        return cell
+        if product.price > 3000000 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "expensiveCell") as! CustomExpensiveCell
+            cell.setupCell(product)
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CustomCell
+            cell.setupCell(product)
+            return cell
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,7 +72,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        let product = friendsWishlist[indexPath.section].wishlist[indexPath.row]
+        if product.price > 3000000 {
+            return 200
+        } else {
+            return 120
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
